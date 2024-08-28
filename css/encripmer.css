@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color1-fondo: #ded8d8;
+    --color2-blanco: #F6F6F6;
+    --color3-azul: #0A3871;
+    --color4-gris-sua: #bbc3c3;
+    --color5-gris-os: #343A40;
+    --color6-de-avisos: #495057;
+    --fuente-textos:"Inter", sans-serif;
+}
+
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-textos);
+}
+
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--color1-fondo);
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color4-gris-sua);
+}
+
+.header-nombre{
+    font-size: 2rem;
+    color: var(--color3-azul);
+}
+
+.header-funcion{
+    font-size: 1rem;
+    color: var(--color3-azul);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.encriptar{
+    width: 59vw;
+    height: 100%;
+    padding: 2% 1% 1% 15%;
+}
+
+.texto-a-encriptar{
+    position: relative;
+    resize: none;
+    background-color: transparent;
+    color: var(--color3-azul);
+    width: 43vw;
+    height: 65vh;
+    border:solid var(--color1-fondo);
+    outline:none;
+    font-size: 2rem;
+}
+
+.aviso-solo-letras {
+    display: flex;
+    color: var(--color6-de-avisos);
+    font-size: 0.75rem;
+    gap: 0.5rem;
+    padding: 0.8%;
+}
+
+.encriptar-botones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 9vh;
+    gap: 1.5rem;
+}
+
+.botones-encrip{
+    font-size: 1rem;
+    color: var(--color3-azul);
+    border: 2px solid var(--color3-azul);
+    border-radius: 1.5rem; 
+    background-color: var(--color4-gris-sua);
+    width: 48%;
+    height: 9vh;
+}
+
+.botones-encrip:hover, .boton-copiar:hover {
+    color: var(--color2-blanco);
+    background-color: var(--color3-azul);
+    cursor: pointer;
+}
+
+.botones-encrip:active, .boton-copiar:active,.footer-nav:active{
+    transform: scale(0.96);
+}
+
+.encriptado{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color2-blanco);
+    width: 25vw;
+    margin: 1%;
+    border-color: var(--color1-fondo);
+    box-shadow: 0 0 15px 2px var(--color6-de-avisos);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.desencriptado-elementos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dibujo-buscando{
+    background: transparent;
+    margin: 5%;
+}
+
+.alerta-no-resultados{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color5-gris-os);
+    width: 20vw;
+    height: 9vh;
+}
+
+.mensaje-colocal-texto{
+    font-size: 1rem;
+    color: var(--color6-de-avisos);
+    width: 20vw;
+    height: 9vh;
+}
+
+.boton-copiar{
+    font-size: 1rem;
+    color: var(--color3-azul);
+    border: 2px solid var(--color3-azul);
+    border-radius: 1.5rem; 
+    background-color: var(--color4-gris-sua);
+    width: 20vw;
+    height: 9vh;
+    visibility: hidden;
+    position: absolute; 
+    bottom: 3%; 
+    margin: 3% 0 0 0;
+}
+
+.texto-encriptado{
+    position: absolute;
+    resize: none;
+    outline: none;
+    width: 25vw;
+    color: var(--color6-de-avisos);
+    font-size: 1.5rem;
+    padding: 2% 1% 0% 2%;
+    background-color: transparent;
+    border: none;
+    border-radius: 2rem;
+    overflow-y: auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color4-gris-sua);
+}
+
+.footer-nav{
+    font-size: 1.5rem;
+    color: var(--color3-azul);
+    text-decoration: none;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.footer-nav:hover{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+@media (min-width: 1201px) {
+    .encriptado{
+        height: 82vh;
+    }
+
+    .texto-encriptado{
+        height: 69.3vh;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    *{
+        font-size: 22px;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+    .encriptar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 60vh;
+        padding: 2% 0% 0% 3%;
+    }
+
+    .texto-a-encriptar{
+        width: 98%;
+        height: 45vh;
+    }
+
+    .encriptar-botones{
+        width: 98%;
+    }
+
+    .botones-encrip{
+        width: 50%;
+        font-size: 1.1rem;   
+    }
+
+    .encriptado{
+        width: 94%;
+        height: auto;
+        min-height: 180px;
+        max-height: 470px;
+        margin: 1% 3% 2% 3%;
+    }
+
+    .desencriptado-elementos{
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    .dibujo-buscando{
+        display: none;
+    }
+    
+    .texto-encriptado{
+        width: 95%;
+        min-height: 140px;
+        max-height: 340px;
+        padding: 1% 0% 0% 0%;
+    }
+
+    .alerta-no-resultados{
+        width: 99%;
+        height: auto;
+        padding: 3% 0% 0% 0%;
+    }
+
+    .mensaje-colocal-texto{
+        width: 100%;
+        height: auto;
+        padding: 0% 0% 4% 0%;
+    }
+    
+    .boton-copiar{
+        width: 94%;
+        height: 7vh;
+    }
+}
+
+@media(max-width: 700px){
+    *{
+        font-size: 18px;
+    }
+
+    .encriptar-botones{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 2% 0% 4% 0%;
+    }
+    .botones-encrip{
+        width: 98%;
+        height: 8vh;
+    }
+
+    .boton-copiar{
+         height: 8vh;
+    }
+
+    .encriptado{
+        height: auto;
+        max-height: 350px;
+    }
+    .texto-encriptado{
+        width: 94%;
+        min-height: 180px;
+        max-height: 270px;
+        padding: 1% 0% 0% 2%;
+    }
+}

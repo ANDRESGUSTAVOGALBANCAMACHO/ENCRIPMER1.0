@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="/css/encripmer.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header-nombre">ENCRIPMER</h1>
+        <P class="header-funcion"> Encripta Y desencripta tus textos de manera sencilla</P>
+    </header>
+    
+    <main class="contenedor">
+        <section class="encriptar">
+            <textarea class="texto-a-encriptar" id="texEncriptar" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="aviso-solo-letras">
+                <img src="/imagenes/exclamacion.svg" alt="exclamacion" class="exclamacion">
+                <p> Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptar-botones">
+                <button id="botonEncriptar" class="botones-encrip" type="button">Encriptar</button>
+                <button id="botonDesencriptar" class="botones-encrip" type="button">Desencriptar</button>
+            </div>
+        </section>
+
+        <section id="encriptado" class="encriptado">
+            <div class="desencriptado-elementos">
+                <img src="/imagenes/dibujo.svg" alt="dibujo-buscando" class="dibujo-buscando">
+                <h2 class="alerta-no-resultados">Ningún mensaje fue encontrado</h2>
+                <p class="mensaje-colocal-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="texto-encriptado" id="texEncriptado" readonly></textarea>
+            <button id="botonCopiar" class="boton-copiar" type="button">Copiar</button>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <a class="footer-nav" href="/html/sobremi.html"> <p>CLICK AQUI Y CONOCE SOBRE EL DESARROLLADOR</p></a>
+    </footer>
+    
+    <script src="/js/encripmer.js"></script>
+</body>
+</html>
